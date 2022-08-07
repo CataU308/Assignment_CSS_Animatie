@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title> Assignment Animatie</title>
+<style>
+
+body {
+    justify-content: center;
+    margin: 10px;
+    padding: auto;
+    display: felx;
+    background-color: #050210;
+}
+
+.circle {
+    
+    position: relative;
+    width: 350px;
+    height: 350px;
+    background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+    border-radius: 50%;
+    animation: animate 2s linear infinite;
+}
+@keyframes animate { 
+    from {
+        transform: rotate(0deg);
+}
+    to {
+        transform: rotate(360deg);
+    }
+}
+.circle:after {
+    content:'';
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    bottom: 25px;
+    left: 25px;
+    border-radius: 50%;
+    background-color: #050210;
+}
+
+.circle span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#fb5dad, #55fb9f, #b97);
+    border-radius: 50%;
+}  
+
+.circle span:nth-child(1){
+    filter: blur(5px);    
+}
+.circle span:nth-child(2){
+    filter: blur(10px);    
+}
+.circle span:nth-child(3){
+    filter: blur(20px);    
+}
+.circle span:nth-child(4){
+    filter: blur(55px);    
+}
+</style>
+</head>
+<body>
+ <div class="circle">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+ </div>
+
+</body>
+
+</html>
